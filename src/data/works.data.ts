@@ -3,44 +3,6 @@ import type { WorkPage } from "../types/works.types";
 
 export const works: WorkPage[] = [
     {
-        slug: "desencuentros",
-        title: "Desencuentros",
-        description: "Este proyecto artístico consta de imagenes de la figura humana que pretenden dar cuenta de una problemática actual que es la de las relaciones humanas mediadas por las redes sociales. Se explora el trabajo de la figura humana, así como desde el punto de vista discursivo se hace énfasis en un dilema que nos atraviesa hoy en día; la paradoja de la dificultad del encuentro en la era de la hiperconectividad.",
-        mainImage: { image: "/images/trabajos/desencuentros/dibujo1.jpg", },
-        images: [
-            { image: "/images/trabajos/desencuentros/dibujo2.jpg", },
-            { image: "/images/trabajos/desencuentros/dibujo3.jpg", },
-            { image: "/images/trabajos/desencuentros/dibujo4.jpg", },
-        ]
-    },
-    {
-        slug: "poemario",
-        title: "Poemario",
-        description: "Poemas de mi autoría",
-        mainImage: { image: "/images/poemario/poemario1.png" },
-        images: [
-            { image: "/images/poemario/poemario2.png", },
-            { image: "/images/poemario/poemario3.png", },
-            { image: "/images/poemario/poemario4.png", },
-            { image: "/images/poemario/poemario5.png", },
-        ]
-    },
-    {
-        slug: "maquillaje",
-        title: "Maquillaje artístico",
-        description: "Fotografías por Alexis Sepúlveda Catalán, modelo: Agustina Giménez",
-        mainImage: { image: "/images/fotografias/maquillaje1.jpg" },
-        images: [
-            { image: "/images/fotografias/maquillaje2.jpg" },
-            { image: "/images/fotografias/maquillaje3.jpg" },
-            { image: "/images/fotografias/maquillaje4.jpg" },
-            { image: "/images/fotografias/maquillaje5.jpg" },
-            { image: "/images/fotografias/maquillaje6.jpg" },
-            { image: "/images/fotografias/maquillaje7.jpg" },
-            { image: "/images/fotografias/maquillaje8.jpg" },
-        ]
-    },
-    {
         slug: "grabado",
         title: "De corazón, dolor",
         description: 'Este proyecto que abarca diferentes técnicas de Grabado tales como Mezzotinta, Aguatinta al crayón y Puntaseca entre otras, busca indagar en una cuestión que solemos dar por sentada, pero que no es menos curiosa e interesante de abordar, y es la relación que establece la cultura occidental entre el corazón y las emociones humanas. De esta manera decidí realizar un abordaje visual de metáforas en las que el dolor físico aparece representando al dolor emocional y viceversa, así como también se puede dar una fusión entre ambos. De este modo sucede que el dolor es algo que va emergiendo en estas reflexiones visuales, así como sentimientos de euforia o exaltación emocional, que son justamente las que hacen latir con rapidez a este gran "saltador" que nos acompaña durante el resto de nuestras vidas.',
@@ -65,6 +27,44 @@ export const works: WorkPage[] = [
             { image: "/images/pinturas/pintura3.jpg" },
             { image: "/images/pinturas/pintura4.jpg" },
             { image: "/images/pinturas/pintura5.jpg" },
+        ]
+    },
+    {
+        slug: "desencuentros",
+        title: "Desencuentros",
+        description: "Este proyecto artístico consta de imagenes de la figura humana que pretenden dar cuenta de una problemática actual que es la de las relaciones humanas mediadas por las redes sociales. Se explora el trabajo de la figura humana, así como desde el punto de vista discursivo se hace énfasis en un dilema que nos atraviesa hoy en día; la paradoja de la dificultad del encuentro en la era de la hiperconectividad.",
+        mainImage: { image: "/images/trabajos/desencuentros/dibujo1.jpg", },
+        images: [
+            { image: "/images/trabajos/desencuentros/dibujo2.jpg", },
+            { image: "/images/trabajos/desencuentros/dibujo3.jpg", },
+            { image: "/images/trabajos/desencuentros/dibujo4.jpg", },
+        ]
+    },
+    {
+        slug: "maquillaje",
+        title: "Maquillaje artístico",
+        description: "Fotografías por Alexis Sepúlveda Catalán, modelo: Agustina Giménez",
+        mainImage: { image: "/images/fotografias/maquillaje1.jpg" },
+        images: [
+            { image: "/images/fotografias/maquillaje2.jpg" },
+            { image: "/images/fotografias/maquillaje3.jpg" },
+            { image: "/images/fotografias/maquillaje4.jpg" },
+            { image: "/images/fotografias/maquillaje5.jpg" },
+            { image: "/images/fotografias/maquillaje6.jpg" },
+            { image: "/images/fotografias/maquillaje7.jpg" },
+            { image: "/images/fotografias/maquillaje8.jpg" },
+        ]
+    },
+    {
+        slug: "poemario",
+        title: "Poemario",
+        description: "Poemas de mi autoría",
+        mainImage: { image: "/images/poemario/poemario1.png" },
+        images: [
+            { image: "/images/poemario/poemario2.png", },
+            { image: "/images/poemario/poemario3.png", },
+            { image: "/images/poemario/poemario4.png", },
+            { image: "/images/poemario/poemario5.png", },
         ]
     }
 ];
