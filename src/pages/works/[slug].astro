@@ -1,0 +1,98 @@
+---
+import { works } from "../../data/works.data";
+import MainLayout from "../../layouts/MainLayout.astro";
+import type { WorkPage } from "../../types/works.types";
+
+export async function getStaticPaths() {
+    return works.map((work: WorkPage) => ({
+        params: { slug: work.slug },
+        props: {
+            title: work.title,
+            description: work.description,
+            mainImage: work.mainImage,
+            images: work.images,
+        },
+    }));
+}
+
+interface Props {
+    title: string;
+    description: string;
+    mainImage: {
+        image: string;
+        size?: string;
+    };
+    images: {
+        image: string;
+        size?: string;
+    }[];
+}
+
+const { title, description, mainImage, images } = Astro.props;
+---
+
+<MainLayout>
+    <div class="work-container">
+        <div class="back-btn"><a href="/trabajos">Volver</a></div>
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <div class="main-image-container">
+            <img src={mainImage.image} alt={mainImage.image} />
+        </div>
+        <div class="images-container">
+            {images.map((image) => <img src={image.image} alt={image.image} />)}
+        </div>
+        <div class="back-btn"><a href="/trabajos">Volver</a></div>
+    </div>
+</MainLayout>
+
+<style>
+    .work-container {
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .main-image-container img {
+        max-width: 100%;
+
+        width: 60rem;
+        margin: 1rem;
+    }
+
+    .images-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .images-container img {
+        max-width: 100%;
+        width: 30rem;
+        margin: 1rem;
+    }
+
+    .back-btn {
+        background-color: white;
+        width: fit-content;
+        padding: 0.4rem 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .back-btn a {
+        color: black;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 700px) {
+        .work-container {
+            margin: 1rem;
+        }
+
+        .main-image-container img {
+            margin: 0;
+        }
+        .images-container img {
+            margin: 0;
+        }
+    }
+</style>

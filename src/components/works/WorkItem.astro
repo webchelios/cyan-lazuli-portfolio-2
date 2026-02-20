@@ -1,0 +1,38 @@
+---
+interface Work {
+    image: string;
+    size?: string;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    mainImage: Work;
+    images: Work[];
+}
+
+const { title, description, mainImage, images } = Astro.props;
+---
+
+<div class="work">
+    <h1>{title}</h1>
+    <div class="work-main-image">
+        <img src={mainImage.image} alt={mainImage.image} />
+    </div>
+    <div class="work-images">
+        {images.map((work) => <img src={work.image} alt={work.image} />)}
+    </div>
+    <p>{description}</p>
+    <slot />
+</div>
+
+<style>
+    .work-main-image img {
+        max-width: 100%;
+        width: 60rem;
+    }
+    .work-images img {
+        max-width: 100%;
+        width: 30rem;
+    }
+</style>

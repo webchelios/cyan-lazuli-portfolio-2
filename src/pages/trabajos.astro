@@ -1,0 +1,88 @@
+---
+import { works } from "../data/works.data";
+import MainLayout from "../layouts/MainLayout.astro";
+import type { WorkPage } from "../types/works.types";
+
+const workIterable: WorkPage[] = works;
+---
+
+<MainLayout>
+	<div class="work-container">
+		{
+			workIterable.map((work) => (
+				<div class="card">
+					<h2>{work.title}</h2>
+					<a href={`/works/${work.slug}`}>
+						<img
+							class="main-image"
+							src={work.mainImage.image}
+							alt={work.title}
+						/>
+					</a>
+
+					<div class="images-container">
+						{work.images.map((image) => (
+							<a href={`/works/${work.slug}`}>
+								<img src={image.image} alt={image.image} />
+							</a>
+						))}
+					</div>
+					<div class="view-btn">
+						<a href={`/works/${work.slug}`} class="btn">
+							Ver proyecto
+						</a>
+					</div>
+				</div>
+			))
+		}
+	</div>
+</MainLayout>
+
+<style>
+	.work-container {
+		text-align: center;
+		margin: 2rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	.main-image {
+		max-width: 100%;
+		width: 30rem;
+		margin-bottom: 1rem;
+	}
+
+	.images-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.images-container img {
+		max-width: 100%;
+		width: 15rem;
+	}
+
+	.view-btn {
+		background-color: white;
+		width: fit-content;
+		padding: 0.4rem 0.5rem;
+		border-radius: 1rem;
+		margin: 0 auto;
+		margin-top: 1rem;
+	}
+
+	.view-btn a {
+		color: black;
+		text-decoration: none;
+	}
+
+	@media screen and (max-width: 700px) {
+		h2 {
+			font-size: 2rem;
+		}
+	}
+</style>
