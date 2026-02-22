@@ -21,9 +21,12 @@ import Footer from "../components/Footer.astro";
 </html>
 
 <style>
+	@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap");
+
 	:root {
-		--main-color: #09a0c2;
+		--main-color: #d0417e;
 		--background-color: rgb(13, 42, 61);
+		--secondary-color: #fdfb01;
 	}
 
 	/* Familia Inter */
@@ -94,22 +97,9 @@ import Footer from "../components/Footer.astro";
 	body {
 		font-family: "Inter", sans-serif;
 		font-weight: 400;
-		color: white;
-		background: linear-gradient(-45deg, #0d2a3d, #2c6580, #0b3c4f, #1b546d);
+		color: black;
+		background: hsl(199, 93%, 60%);
 		background-size: 400% 400%;
-		animation: gradientBG 15s ease infinite;
-	}
-
-	@keyframes gradientBG {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
 	}
 
 	body {
@@ -156,8 +146,11 @@ import Footer from "../components/Footer.astro";
 	h4,
 	h5,
 	.navbar-brand {
-		font-family: "Encode", sans-serif;
-		font-weight: 500;
+		/* font-family: "Encode", sans-serif;
+		font-weight: 500; */
+		font-family: "DynaPuff", system-ui;
+		font-weight: 400;
+		font-style: normal;
 	}
 
 	.main-content {
