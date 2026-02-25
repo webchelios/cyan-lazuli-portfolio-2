@@ -11,8 +11,8 @@ export const works: WorkPage[] = [
             { image: "/images/grabado/grabado2.jpg" },
             { image: "/images/grabado/grabado3.jpg" },
             { image: "/images/grabado/grabado4.jpg" },
-            { image: "/images/grabado/grabado5.jpg" },
-            { image: "/images/grabado/grabado6.jpg" },
+            { image: "/images/grabado/grabado5.png" },
+            { image: "/images/grabado/grabado6.png" },
             { image: "/images/grabado/grabado7.jpg" },
             { image: "/images/grabado/grabado8.jpg" },
         ]

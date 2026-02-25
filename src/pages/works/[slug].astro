@@ -42,7 +42,7 @@ const { title, description, mainImage, images } = Astro.props;
         <div class="images-container">
             {images.map((image) => <img src={image.image} alt={image.image} />)}
         </div>
-        <div class="back-btn"><a href="/trabajos">Volver</a></div>
+        <div class="back-btn2"><a href="/trabajos">Volver</a></div>
     </div>
 </MainLayout>
 
@@ -52,10 +52,14 @@ const { title, description, mainImage, images } = Astro.props;
         text-align: center;
     }
 
+    p {
+        margin-bottom: 1.5rem;
+    }
+
     .main-image-container img {
-        max-width: 100%;∂
-        width: 60rem;
-        margin: 1rem;
+        max-width: 100%;
+        width: 30rem;
+        margin: 0.5rem;
     }
 
     .images-container {
@@ -79,6 +83,21 @@ const { title, description, mainImage, images } = Astro.props;
     }
 
     .back-btn a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .back-btn2 {
+        background-color: white;
+        width: fit-content;
+        padding: 0.4rem 0.5rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .back-btn2 a {
         color: black;
         text-decoration: none;
     }
