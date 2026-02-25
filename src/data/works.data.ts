@@ -57,8 +57,8 @@ export const works: WorkPage[] = [
     },
     {
         slug: "poemario",
-        title: "Poemario",
-        description: "Poemas de mi autoría",
+        title: 'Poemario "Versos descarnados"',
+        description: "Publicación realizada por la editorial Copo de Nieve",
         mainImage: { image: "/images/poemario/poemario1.png" },
         images: [
             { image: "/images/poemario/poemario2.png", },
